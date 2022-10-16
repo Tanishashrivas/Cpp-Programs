@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include<iostream>
+using namespace std;
 void swap(int* a, int* b)
 {
     int temp = *a;
@@ -40,7 +41,7 @@ void heapSort(int arr[], int N)
 void printArray(int arr[], int N)
 {
     for (int i = 0; i < N; i++)
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
         cout<<endl;
 }
  
