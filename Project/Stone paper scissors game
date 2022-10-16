@@ -1,0 +1,36 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+int StonePaperScissor(char you,char comp){
+	if(you==comp)
+		cout<<"It's a draw!"<<endl;
+	else if((you=='p' && comp=='s') || (you=='s' && comp=='c') || (you=='c' && comp=='p'))
+		cout<<"You win!"<<endl;
+    else
+    cout<<"Computer wins!"<<endl;
+    
+}
+int main(){
+	char you, comp;
+	while(1){
+	int number = rand()%100 + 1;
+	srand(time(0));
+	
+	if(number<33){
+		comp = 's';
+	}
+	else if(number>33 && number<66){
+		comp = 'p';
+	}
+	else{
+		comp = 'c';
+	}
+
+	cout<<"Enter s for stone, p for paper, or c for scissors"<<endl;
+	cin>>you;
+    StonePaperScissor(you,comp);
+}
+	return 0;
+}
